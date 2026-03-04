@@ -1,0 +1,398 @@
+:root {
+    --soft-orange: #FFB347;
+    --soft-green: #B2FFDA;
+    --dark-green: #1A2F23;
+    --bg-cream: #FDFBF9;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--dark-green);
+    line-height: 1.8;
+}
+
+.text-serif { font-family: 'Playfair Display', serif; }
+.text-orange { color: var(--soft-orange); font-weight: 600; }
+.text-green-soft { color: #82c4a4; }
+
+/* Navbar */
+.custom-nav {
+    background: rgba(253, 251, 249, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(26, 47, 35, 0.05);
+}
+
+/* Hero Section */
+.hero-small {
+    height: 40vh;
+    background: linear-gradient(135deg, var(--soft-green) 0%, var(--soft-orange) 100%);
+    margin-top: 60px;
+}
+
+.divider {
+    width: 80px;
+    height: 4px;
+    background: var(--dark-green);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Sobre Mí */
+.profile-pic {
+    border-radius: 30px;
+    box-shadow: 20px 20px 0px var(--soft-green);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.02);
+}
+
+.lead-text {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Experiencias */
+.bg-soft {
+    background-color: #f4fcf8;
+}
+
+.gallery-img {
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.gallery-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-cream);
+    border-top: 1px solid #eee;
+}
+
+/* 3D Canvas Container */
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+#canvas-container canvas {
+    display: block;
+}
+
+#chat-bubble {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--soft-orange), #ffcc80);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(255, 179, 71, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+#chat-bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(255, 179, 71, 0.5);
+}
+
+#chat-bubble .bi-chat-dots-fill::before {
+    transition: transform 0.3s ease;
+}
+
+#chat-bubble:hover .bi-chat-dots-fill::before {
+    transform: rotate(10deg);
+}
+
+#chat-window {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    border: 1px solid var(--soft-green);
+}
+
+.chat-header {
+    background: var(--soft-green);
+    padding: 15px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+#chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+}
+
+.chat-input-area {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid rgba(178, 255, 218, 0.3);
+}
+
+.chat-input-area input {
+    border: 2px solid #eee;
+    border-radius: 12px;
+    padding: 10px 15px;
+    flex: 1;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.chat-input-area input:focus {
+    outline: none;
+    border-color: var(--soft-green);
+    box-shadow: 0 0 0 3px rgba(178, 255, 218, 0.3);
+}
+
+#send-btn {
+    background: var(--soft-green);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 15px;
+    color: var(--dark-green);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#send-btn:hover {
+    background: var(--soft-orange);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Chat Messages Styling */
+.chat-message {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.chat-message.user-message {
+    justify-content: flex-end;
+}
+
+.chat-message.bot-message {
+    justify-content: flex-start;
+}
+
+.message-bubble {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.message-bubble.you {
+    background: linear-gradient(135deg, var(--soft-orange), #ffcc80);
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.message-bubble.bot {
+    background: rgba(178, 255, 218, 0.4);
+    color: var(--dark-green);
+    border: 1px solid var(--soft-green);
+    border-bottom-left-radius: 4px;
+}
+
+.message-bubble.error {
+    background: rgba(255, 179, 71, 0.2);
+    color: #c45c00;
+    border: 1px solid var(--soft-orange);
+}
+
+.message-avatar {
+    width: 32px;
+    height: 32px;
+    background: var(--soft-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.message-avatar i {
+    color: var(--dark-green);
+    font-size: 16px;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.typing-dots {
+    display: flex;
+    gap: 4px;
+    padding: 12px 16px;
+    background: rgba(178, 255, 218, 0.4);
+    border-radius: 18px;
+    border-bottom-left-radius: 4px;
+}
+
+.typing-dots span {
+    width: 8px;
+    height: 8px;
+    background: var(--dark-green);
+    border-radius: 50%;
+    animation: typingBounce 1.4s infinite ease-in-out both;
+}
+
+.typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+.typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typingBounce {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; }
+    40% { transform: scale(1); opacity: 1; }
+}
+
+/* ========================================
+   SUSCRIPTION SECTION
+======================================== */
+#suscripcion {
+    background: linear-gradient(135deg, rgba(178, 255, 218, 0.15) 0%, rgba(255, 179, 71, 0.15) 100%);
+    position: relative;
+}
+
+.subscription-container {
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    border: 1px solid var(--soft-green);
+    box-shadow: 0 15px 35px rgba(26, 47, 35, 0.1);
+}
+
+.subscription-header h3 {
+    color: var(--dark-green);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.subscription-form .input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.subscription-form input[type="email"] {
+    flex: 1;
+    padding: 14px 20px;
+    border: 2px solid var(--soft-green);
+    border-radius: 12px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.subscription-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--soft-orange);
+    box-shadow: 0 0 0 4px rgba(255, 179, 71, 0.2);
+}
+
+.btn-subscribe {
+    background: linear-gradient(135deg, var(--soft-orange), #ffcc80);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+}
+
+.btn-subscribe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 179, 71, 0.4);
+}
+
+.btn-subscribe:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.response-message {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.response-message.success {
+    background: rgba(178, 255, 218, 0.3);
+    color: var(--dark-green);
+    border: 1px solid var(--soft-green);
+}
+
+.response-message.error {
+    background: rgba(255, 179, 71, 0.2);
+    color: #c45c00;
+    border: 1px solid var(--soft-orange);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .subscription-form .input-group {
+        flex-direction: column;
+    }
+    
+    .btn-subscribe {
+        width: 100%;
+    }
+}

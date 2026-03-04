@@ -1,0 +1,103 @@
+/* ========================================
+   CUSTOM ANIMATIONS
+======================================== */
+
+/* Subscription Form Animations */
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 179, 71, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 20px 10px rgba(255, 179, 71, 0.2);
+    }
+}
+
+@keyframes inputFocus {
+    0% {
+        border-color: var(--soft-green);
+    }
+    50% {
+        border-color: var(--soft-orange);
+    }
+    100% {
+        border-color: var(--soft-orange);
+    }
+}
+
+/* Apply animations */
+.subscription-container {
+    animation: slideUpFade 0.6s ease-out;
+}
+
+.subscription-form input[type="email"]:focus {
+    animation: inputFocus 0.3s ease-in-out;
+}
+
+.btn-subscribe:active {
+    animation: pulseGlow 0.5s ease-in-out;
+}
+
+/* Success animation for subscription */
+.response-message.success {
+    animation: slideUpFade 0.4s ease-out;
+}
+
+/* Chat animations */
+#chat-bubble {
+    animation: pulseGlow 2s infinite;
+}
+
+#chat-bubble.pulse {
+    animation: pulseGlow 0.5s ease-in-out;
+}
+
+/* Message animations */
+.message-bubble {
+    animation: slideUpFade 0.3s ease-out;
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, input, .gallery-img, .profile-pic {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover effects */
+.btn-subscribe:hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Loading spinner enhancement */
+.bi-arrow-repeat {
+    display: inline-block;
+}
+
+/* Gradient text effect for headers */
+.text-serif {
+    background: linear-gradient(135deg, var(--dark-green), #2d5a3d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+    outline: 2px solid var(--soft-orange);
+    outline-offset: 2px;
+}
+

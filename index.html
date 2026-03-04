@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduBlog | Mi Bitácora de Viaje</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" href="assets/img/icons/blog-icon.png">
+    
+    <link rel="apple-touch-icon" href="assets/img/icons/blog-icon.png">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+</head>
+<body>
+    <div id="chat-bubble" class="wow animate__animated animate__bounceIn">
+    <i class="bi bi-chat-dots-fill"></i>
+</div>
+
+<div id="chat-window" class="d-none">
+    <div class="chat-header">
+        <span class="text-serif">EduBot</span>
+        <button id="close-chat">&times;</button>
+    </div>
+    <div id="chat-messages"></div>
+    <div class="chat-input-area">
+        <input type="text" id="user-input" placeholder="Pregúntame algo...">
+        <button id="send-btn"><i class="bi bi-send"></i></button>
+    </div>
+</div>
+
+
+
+
+    <div id="canvas-container"></div>
+
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+        <div class="container">
+            <a class="navbar-brand text-serif" href="#">EduBlog</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-small d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-2 text-serif wow animate__animated animate__fadeIn">Un viaje al mismo sitio</h1>
+            <div class="divider mx-auto"></div>
+        </div>
+    </header>
+
+    <section id="sobre-mi" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 mb-4 mb-md-0 text-center wow animate__animated animate__fadeInLeft">
+                    <div class="profile-img-container">
+                        <img src="assets/img/imagen1.jpeg" alt="Tu Nombre" class="img-fluid profile-pic">
+                    </div>
+                </div>
+                <div class="col-md-7 ps-md-5 wow animate__animated animate__fadeInRight">
+                    <h2 class="text-serif display-5 mb-4">Sobre mí</h2>
+                    <h4 class="text-orange mb-3">Soy José Eduardo Pérez Córdova</h4>
+                    <p class="lead-text">
+                        Soy estudiante de ingeniería en sistemas, me encanta aprender sobre ciberseguridad, leer documentación tecnica del tema, siempre he disfrutado la explotación de vulnerabilidades y el análisis de sistemas, aunque no tengo mucha experiencia en el campo, me gusta mucho aprender sobre ello, y espero poder compartir mis experiencias y conocimientos siempre que lo necesiten, y bueno de viajes realmente no hay mucho de que hablar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="py-5 bg-soft">
+        <div class="container">
+            <h2 class="text-serif text-center display-4 mb-5">Mis Experiencias (viajes)</h2>
+
+            <div class="place-container mb-5 pb-5 border-bottom wow animate__animated animate__fadeInUp">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-serif h1 mb-4"> Cardenas xd</h3>
+                        <p class="mb-4 text-justify">
+                            Cardenas es un sitio que a pesar de todo con el paso del tiempo se ha vuelto muy bonito, aunque no es muy grande aun hay zonas muy bonitas que han sido remodeladas para darle vida a la ciudad, ademas que regularmente se hacen eventos en el municipio.
+
+                        </p>
+                        <div class="row g-3">
+                            <div class="col-md-4"><img src="assets/img/imagen2.jpeg" class="img-fluid rounded-4 gallery-img" alt="Imagen 1"></div>
+                            <div class="col-md-4"><img src="assets/img/imagen3.jpeg" class="img-fluid rounded-4 gallery-img" alt="Imagen 2"></div>
+                            <div class="col-md-4"><img src="assets/img/imagen4.jpeg" class="img-fluid rounded-4 gallery-img" alt="Imagen 3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="place-container mb-5 wow animate__animated animate__fadeInUp">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-serif h1 mb-4">Ciudad Juarez </h3>
+                        <p class="mb-4 text-justify">
+                            Ciudad Juarez es una ciudad que a pesar de su fama, tiene lugares muy bonitos, como el monumento a la mexicanidad, el cual es un monumento que representa la cultura mexicana, ademas de que tiene una vista muy bonita de la ciudad, y es un lugar muy tranquilo para pasar el rato.
+
+                        </p>
+                        <div class="row g-3">
+                            <div class="col-md-4"><img src="assets/img/imagen5.jpeg" class="img-fluid rounded-4 gallery-img" alt="Imagen 1"></div>
+                            <div class="col-md-4"><img src="assets/img/imagen6.jpeg" class="img-fluid rounded-4 gallery-img" alt="Imagen 2"></div>
+                            <div class="col-md-4"><img src="assets/img/imagen7.jpeg" class="img-fluid rounded-4 gallery-img" alt="Imagen 3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="suscripcion" class="py-5">
+        <div class="container">
+            <div class="subscription-container mx-auto wow animate__animated animate__fadeInUp">
+                <div class="subscription-header text-center">
+                    <h3 class="text-serif">Suscríbete a mi blog</h3>
+                    <p class="text-muted mb-0">Recibe las últimas actualizaciones directamente en tu correo</p>
+                </div>
+                <form id="subscribe-form" class="subscription-form">
+                    <div class="input-group">
+                        <input type="email" name="user_email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn-subscribe">
+                            <span class="btn-text">Suscribirme</span>
+                            <span class="btn-loader d-none">
+                                <i class="bi bi-arrow-repeat spin"></i>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+                <div id="response-msg" class="response-message text-center"></div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+
+    <footer class="py-5">
+        <div class="container text-center">
+            <p class="mb-0 text-muted">
+                &copy; 2026 <span class="text-serif fw-bold">EduBlog</span>. Todos los derechos reservados.
+            </p>
+            <p class="small text-green-soft mt-2">Explorando el mundo, un píxel a la vez.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+    emailjs.init('XaYN6MSuA31mKmC56')
+    </script>
+    <script src="js/animation-3d.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/suscripcion.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>
