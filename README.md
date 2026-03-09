@@ -31,7 +31,7 @@ Este proyecto es una bitácora personal donde convergen mis dos grandes pasiones
 | Cárdenas | Ciudad Juárez |
 | :---: | :---: |
 | ![Cárdenas](assets/img/imagen2.jpeg) | ![Ciudad Juárez](assets/img/imagen5.jpeg) |
-| *La belleza de la zona remodelada.* | *El imponente Monumento a la Mexicanidad.* |
+| *La belleza de la zona remodelada.* | *Monumento.* |
 
 
 ### 👤 Sobre mi
