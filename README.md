@@ -19,10 +19,10 @@ Este proyecto es una bitácora personal donde convergen mis dos grandes pasiones
 
 ### ✨ Mi blog integra:
 
-* **🤖 Edustente:** Un chatbot integrado mediante n8n para resolver dudas sobre el autor de forma interactiva.
-* **📧 Sistema de Suscripción:** Integración robusta con **EmailJS** para notificaciones automatizadas en tiempo real.
-* **🎨 Experiencia Visual:** Animaciones fluidas utilizando **Three.js**, GSAP y efectos de desplazamiento con WOW.js.
-* **📱 Diseño Responsive:** Adaptabilidad total para móviles y escritorio gracias a Bootstrap 5.
+* ** Edustente:** Un chatbot integrado mediante n8n para resolver dudas sobre el autor de forma interactiva.
+* ** Sistema de Suscripción:** Integración robusta con **EmailJS** para notificaciones automatizadas en tiempo real.
+* ** Experiencia Visual:** Animaciones fluidas utilizando **Three.js**, GSAP y efectos de desplazamiento con WOW.js.
+* ** Diseño Responsive:** Adaptabilidad total para móviles y escritorio gracias a Bootstrap 5.
 
 
 
