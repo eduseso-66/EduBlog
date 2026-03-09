@@ -1,15 +1,15 @@
 $(document).ready(function() {
     // Inicializar EmailJS
     (function(){
-        emailjs.init("XaYN6MSuA31mKmC56");
+        emailjs.init("EMAILJS_PUBLIC_KEY");
     })();
 
 
 
     $("#subscribe-form").on("submit", function(e) {
         e.preventDefault();
-        const serviceID = 'service_e9373he';
-        const templateID = 'template_7843lyp';
+        const serviceID = 'EMAILJS_SERVICE_ID';
+        const templateID = 'EMAILJS_TEMPLATE_ID';
         const $form = $(this);
         const $btn = $form.find('button[type="submit"]');
         const $btnText = $btn.find('.btn-text');

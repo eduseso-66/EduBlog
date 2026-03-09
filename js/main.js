@@ -1,5 +1,5 @@
 /*$(document).ready(function() {
-    const n8nWebhookUrl = 'https://eduardocordova.app.n8n.cloud/webhook/4711ee21-b0fd-4081-a2ee-4254edc2d451/chat';
+    const n8nWebhookUrl = 'N8N_WEBHOOK_URL';
 
     $('#chat-bubble').click(function() {
         $('#chat-window').toggleClass('d-none');
