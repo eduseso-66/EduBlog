@@ -1,7 +1,6 @@
-$(document).ready(function() {
-    const n8nWebhookUrl = 'https://eduardocordova.app.n8n.cloud/webhook/chatbot-blog';
+/*$(document).ready(function() {
+    const n8nWebhookUrl = 'https://eduardocordova.app.n8n.cloud/webhook/4711ee21-b0fd-4081-a2ee-4254edc2d451/chat';
 
-    // Toggle chat window with animation
     $('#chat-bubble').click(function() {
         $('#chat-window').toggleClass('d-none');
         if (!$('#chat-window').hasClass('d-none')) {
@@ -26,7 +25,6 @@ $(document).ready(function() {
         const message = $('#user-input').val();
         if (!message) return;
 
-        // Add user message with animation
         const userMsgHtml = `
             <div class="chat-message user-message animate__animated animate__fadeIn">
                 <div class="message-bubble you">
@@ -37,50 +35,49 @@ $(document).ready(function() {
         $('#chat-messages').append(userMsgHtml);
         $('#user-input').val('');
         
-        // Scroll to bottom
         scrollToBottom();
 
-        // Show typing indicator
         showTypingIndicator();
 
-        // Call n8n
-$.ajax({
-    url: n8nWebhookUrl,
-    method: 'POST',
-    contentType: 'application/json',
-    data: JSON.stringify({
-        message: message
-    }),
-    success: function(response) {
-        $('.typing-indicator').remove();
-        
-        const botReply = response.output;
+        //aqui llama a n8n para llamar al bot xd
+        $.ajax({
+            url: n8nWebhookUrl,
+            method: 'POST',
+            data: JSON.stringify({ message: message }),
+            contentType: 'application/json',
+            success: function(response) {
+                // Remove typing indicator
+                $('.typing-indicator').remove();
+                
+                // Bot reply with animation
+                const botReply = response.output || response[0].output;
+                const botMsgHtml = `
+                    <div class="chat-message bot-message animate__animated animate__fadeIn">
+                        <div class="message-avatar">
+                            <i class="bi bi-robot"></i>
+                        </div>
+                        <div class="message-bubble bot">
+                            ${escapeHtml(botReply)}
+                        </div>
+                    </div>
+                `;
+                $('#chat-messages').append(botMsgHtml);
+                scrollToBottom();
+            },
+            error: function(xhr) {
+                console.log(xhr.responseText);
+                $('.typing-indicator').remove();
+                $('#chat-messages').append(`    
+                    <div class="chat-message error-message animate__animated animate__fadeIn">
+                        <div class="message-bubble error">
+                            <i class="bi bi-exclamation-triangle me-1"></i>
+                            No pude conectar. Por favor intenta de nuevo.
+                        </div>
+                    </div>
+                `);
 
-        const botMsgHtml = `
-            <div class="chat-message bot-message animate__animated animate__fadeIn">
-                <div class="message-avatar">
-                    <i class="bi bi-robot"></i>
-                </div>
-                <div class="message-bubble bot">
-                    ${escapeHtml(botReply)}
-                </div>
-            </div>
-        `;
-        $('#chat-messages').append(botMsgHtml);
-        scrollToBottom();
-    },
-    error: function(xhr) {
-        console.log(xhr.responseText);
-        $('.typing-indicator').remove();
-        $('#chat-messages').append(`
-            <div class="chat-message error-message animate__animated animate__fadeIn">
-                <div class="message-bubble error">
-                    Error de conexión con el servidor.
-                </div>
-            </div>
-        `);
-    }
-});
+            }
+        });
     }
 
     function showTypingIndicator() {
@@ -113,3 +110,7 @@ $.ajax({
     }
 });
 
+*/
+//AL FINAL OCURRIO UN ERROR CON ESTA COENXION AL FLUJO DE TRABAJO PRINCIPAL QUE USE CON N8N
+//La verdad preferi utilizar la forma de agregar el chatbot que permite usar n8n, este codigo queda comentado ya que en la implementacion final se usara.
+//tampoco borre el contenedor del chatbot, aqui me humillo n8n, pero volvere...

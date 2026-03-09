@@ -8,8 +8,8 @@ $(document).ready(function() {
 
     $("#subscribe-form").on("submit", function(e) {
         e.preventDefault();
-        const serviceID = 'default_service';
-        const templateID = 'template_mcp74rj';
+        const serviceID = 'service_e9373he';
+        const templateID = 'template_7843lyp';
         const $form = $(this);
         const $btn = $form.find('button[type="submit"]');
         const $btnText = $btn.find('.btn-text');
@@ -25,15 +25,11 @@ $(document).ready(function() {
         // Enviar formulario
         emailjs.sendForm( serviceID, templateID, this)
             .then(function(response) {
-                // Éxito
                 $responseMsg.addClass('success').text('¡Gracias por suscribirte! Revisa tu correo para confirmar.');
                 $form[0].reset();
-                
-                // Animación de éxito
                 $responseMsg.addClass('animate__animated animate__fadeIn');
             })
             .catch(function(error) {
-                // Error
                 $responseMsg.addClass('error').text('Hubo un problema. Por favor intenta de nuevo.');
                 console.error('EmailJS Error:', error);
             })

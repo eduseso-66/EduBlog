@@ -2,7 +2,6 @@
    CUSTOM ANIMATIONS
 ======================================== */
 
-/* Subscription Form Animations */
 @keyframes slideUpFade {
     from {
         opacity: 0;
@@ -35,7 +34,6 @@
     }
 }
 
-/* Apply animations */
 .subscription-container {
     animation: slideUpFade 0.6s ease-out;
 }
@@ -48,12 +46,10 @@
     animation: pulseGlow 0.5s ease-in-out;
 }
 
-/* Success animation for subscription */
 .response-message.success {
     animation: slideUpFade 0.4s ease-out;
 }
 
-/* Chat animations */
 #chat-bubble {
     animation: pulseGlow 2s infinite;
 }
@@ -62,27 +58,22 @@
     animation: pulseGlow 0.5s ease-in-out;
 }
 
-/* Message animations */
 .message-bubble {
     animation: slideUpFade 0.3s ease-out;
 }
 
-/* Smooth transitions for all interactive elements */
 a, button, input, .gallery-img, .profile-pic {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Hover effects */
 .btn-subscribe:hover {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Loading spinner enhancement */
 .bi-arrow-repeat {
     display: inline-block;
 }
 
-/* Gradient text effect for headers */
 .text-serif {
     background: linear-gradient(135deg, var(--dark-green), #2d5a3d);
     -webkit-background-clip: text;
@@ -90,14 +81,55 @@ a, button, input, .gallery-img, .profile-pic {
     background-clip: text;
 }
 
-/* Smooth scroll behavior */
 html {
     scroll-behavior: smooth;
 }
 
-/* Focus visible for accessibility */
 *:focus-visible {
     outline: 2px solid var(--soft-orange);
     outline-offset: 2px;
 }
 
+
+/* ========================================
+   POST-INTRO CONTENT ANIMATIONS
+======================================== */
+
+/* Blog body starts hidden, intro JS reveals */
+body.intro-active > *:not(#intro-overlay):not(#canvas-container) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Canvas fade in after intro */
+#canvas-container {
+    animation: bgFadeIn 1.5s 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes bgFadeIn {
+    to { opacity: 1; }
+}
+
+/* Smooth scroll & section transitions */
+html { scroll-behavior: smooth; }
+
+/* Hero title shimmer effect */
+.hero-small h1.text-serif {
+    background: linear-gradient(
+        90deg,
+        var(--dark-green) 0%,
+        #2d5a3d 40%,
+        var(--dark-green) 60%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textShimmer 4s linear infinite;
+}
+
+@keyframes textShimmer {
+    0%   { background-position: 200% center; }
+    100% { background-position: -200% center; }
+}
