@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1020&color=EEF713&vCenter=true&multiline=true&width=660&height=80&lines=%F0%9F%8C%8D+EduBlog+%7C+Un+viaje+al+mismo+sitio)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1020&color=EEF713&center=true&vCenter=true&multiline=true&width=784&height=97&lines=%F0%9F%8C%8D+EduBlog+%7C+Un+viaje+al+mismo+sitio)](https://git.io/typing-svg)
 
 > **"Explorando el mundo, un píxel a la vez."**
 
