@@ -6,7 +6,7 @@ Este proyecto es una bitácora personal donde convergen mis dos grandes pasiones
 
 
 
-### 🛠️ Tecnologías que use
+###  Tecnologías que use
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -17,7 +17,7 @@ Este proyecto es una bitácora personal donde convergen mis dos grandes pasiones
 
 
 
-### ✨ Mi blog integra:
+###  Mi blog integra:
 
 * **Edustente:** Un chatbot integrado mediante n8n para resolver dudas sobre el autor de forma interactiva.
 * **Sistema de Suscripción:** Integración robusta con **EmailJS** para notificaciones automatizadas en tiempo real.
@@ -26,7 +26,7 @@ Este proyecto es una bitácora personal donde convergen mis dos grandes pasiones
 
 
 
-### 📸 Galería de Destinos
+###  Galería de Destinos
 
 | Cárdenas | Ciudad Juárez |
 | :---: | :---: |
@@ -36,7 +36,7 @@ Este proyecto es una bitácora personal donde convergen mis dos grandes pasiones
 
 ### 👤 Sobre mi
 
-**Eduardo Cordova** Estudiante de Ingeniería en Sistemas apasionado por la ciberseguridad, el análisis de vulnerabilidades y, ocasionalmente, capturar la esencia de nuevos lugares.
+**Soy Eduardo Cordova** Estudiante de Ingeniería en Sistemas apasionado por la ciberseguridad, el análisis de vulnerabilidades y, ocasionalmente, capturar la esencia de nuevos lugares.
 
 
 
