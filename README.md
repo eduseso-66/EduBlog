@@ -5,7 +5,7 @@ Este proyecto es una bitácora personal donde convergen mis dos grandes pasiones
 
 
 
-### 🛠️ Stack Tecnológico
+### 🛠️ Tecnologías que use
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -16,7 +16,7 @@ Este proyecto es una bitácora personal donde convergen mis dos grandes pasiones
 
 
 
-### ✨ Características Principales
+### ✨ Mi blog integra:
 
 * **🤖 Edustente:** Un chatbot integrado mediante n8n para resolver dudas sobre el autor de forma interactiva.
 * **📧 Sistema de Suscripción:** Integración robusta con **EmailJS** para notificaciones automatizadas en tiempo real.
