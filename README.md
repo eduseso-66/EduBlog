@@ -1,4 +1,5 @@
-# 🌍 EduBlog | Un viaje al mismo sitio
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1020&color=EEF713&vCenter=true&multiline=true&width=660&height=80&lines=%F0%9F%8C%8D+EduBlog+%7C+Un+viaje+al+mismo+sitio)](https://git.io/typing-svg)
+
 > **"Explorando el mundo, un píxel a la vez."**
 
 Este proyecto es una bitácora personal donde convergen mis dos grandes pasiones: la **Ingeniería en Sistemas** y los **viajes**. A través de una interfaz moderna y animada, comparto historias de lugares como Cárdenas y Ciudad Juárez, integrando herramientas de automatización y atención al usuario.
