@@ -33,12 +33,12 @@ Este proyecto es una bitácora personal donde convergen mis dos grandes pasiones
 | *La belleza de la zona remodelada.* | *El imponente Monumento a la Mexicanidad.* |
 
 
-### 👤 Sobre el Autor
+### 👤 Sobre mi
 
 **Eduardo Cordova** Estudiante de Ingeniería en Sistemas apasionado por la ciberseguridad, el análisis de vulnerabilidades y, ocasionalmente, capturar la esencia de nuevos lugares.
 
 
 
 <p align="center">
-  Hecho con ❤️ por <a href="https://github.com/eduseso-66">Eduardo Córdova</a>
+  Hecho por <a href="https://github.com/eduseso-66">Eduardo Córdova</a>
 </p>
