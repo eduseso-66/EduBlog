@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // Inicializar EmailJS
     (function(){
         emailjs.init("XaYN6MSuA31mKmC56");
     })();

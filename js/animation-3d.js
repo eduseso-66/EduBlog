@@ -1,23 +1,15 @@
-/**
- * EduBlog — Intro Screen + Persistent 3D Background
- *
- * PHASE 1: Full-screen 3D intro (star-field galaxy + morphing icosahedron + typed text)
- *         → user clicks "Entrar" or waits 4s auto-dismiss
- * PHASE 2: Overlay fades out → blog content revealed
- *         → lightweight particle field stays as fixed background
- */
 
 (function () {
   'use strict';
 
-  /* ─────────────────────────────────────────────────────────────
-     UTILITIES
-  ───────────────────────────────────────────────────────────── */
+  /* 
+  UTILITIES
+ */
   function lerp(a, b, t) { return a + (b - a) * t; }
 
-  /* ─────────────────────────────────────────────────────────────
-     PALETTE  (mirrors CSS vars)
-  ───────────────────────────────────────────────────────────── */
+  /* 
+    PALETTE(mirrors CSS vars)
+   */
   var C = {
     orange:   0xFFB347,
     green:    0xB2FFDA,
@@ -27,11 +19,7 @@
     orange2:  0xffcc80,
   };
 
-  /* ═══════════════════════════════════════════════════════════
-     PHASE 1 — INTRO SCENE
-  ═══════════════════════════════════════════════════════════ */
 
-  /* --- Create intro overlay DOM ----------------------------- */
   var overlay = document.createElement('div');
   overlay.id  = 'intro-overlay';
   overlay.innerHTML = [
@@ -44,7 +32,7 @@
   ].join('');
   document.body.insertBefore(overlay, document.body.firstChild);
 
-  /* --- Intro styles (injected so they stay with the JS) ----- */
+
   var style = document.createElement('style');
   style.textContent = [
     '#intro-overlay {',
@@ -108,7 +96,7 @@
   document.head.appendChild(style);
   document.body.classList.add('intro-active');
 
-  /* ─── Intro Three.js scene ─────────────────────────────── */
+  /*Intro Three.js scene */
   var iCanvas  = document.getElementById('intro-canvas');
   var iW = function(){ return window.innerWidth; };
   var iH = function(){ return window.innerHeight; };
@@ -133,7 +121,7 @@
   lightB.position.set(12, -6, 8);
   iScene.add(lightB);
 
-  /* ── Star field (random 3 000 points) ─────────────────── */
+  /* Star field (random 3 000 points) */
   var starCount = 3000;
   var starPos   = new Float32Array(starCount * 3);
   var starSizes = new Float32Array(starCount);
@@ -176,7 +164,7 @@
   var stars = new THREE.Points(starGeo, starMat);
   iScene.add(stars);
 
-  /* ── Hero icosahedron — PBR with edge glow ─────────────── */
+  /*Hero icosahedron */
   var heroGeo  = new THREE.IcosahedronGeometry(4.5, 2);
   var heroMat  = new THREE.MeshStandardMaterial({
     color: C.dark,
@@ -203,7 +191,7 @@
   var shell = new THREE.Mesh(shellGeo, shellMat);
   iScene.add(shell);
 
-  /* ── Orbiting rings ─────────────────────────────────────── */
+  /* Orbiting rings */
   function makeRing(radius, tube, color, opacity) {
     var g = new THREE.TorusGeometry(radius, tube, 4, 80);
     var m = new THREE.MeshBasicMaterial({ color: color, transparent: true, opacity: opacity });
@@ -217,7 +205,7 @@
   ring3.rotation.x = Math.PI * 0.2;  ring3.rotation.y = 0.8;
   iScene.add(ring1, ring2, ring3);
 
-  /* ── Floating tetrahedra cluster ───────────────────────── */
+  /* Floating tetrahedra cluster */
   var floaters = [];
   var tetGeo   = new THREE.TetrahedronGeometry(0.55, 0);
   var floaterDefs = [
@@ -239,14 +227,14 @@
                     phase: Math.random() * Math.PI * 2 });
   });
 
-  /* ── Mouse parallax for intro ───────────────────────────── */
+  /* Mouse parallax for intro */
   var iMouse = { tx: 0, ty: 0, x: 0, y: 0 };
   document.addEventListener('mousemove', function(e) {
     iMouse.tx = (e.clientX / iW() - 0.5) * 2;
     iMouse.ty = (e.clientY / iH() - 0.5) * 2;
   });
 
-  /* ── Intro clock & loop ─────────────────────────────────── */
+  /* Intro clock & loop  */
   var iClock    = new THREE.Clock();
   var introDone = false;
   var iFrame;
@@ -288,7 +276,6 @@
     stars.rotation.y  = t * 0.008;
     starMat.uniforms.uTime.value = t;
 
-    /* Lights orbit */
     lightA.position.x = Math.cos(t * 0.4) * 14;
     lightA.position.z = Math.sin(t * 0.4) * 10;
     lightB.position.x = Math.sin(t * 0.3) * 16;
@@ -306,7 +293,7 @@
     iRenderer.setSize(iW(), iH());
   });
 
-  /* ── Exit transition ─────────────────────────────────────── */
+  /* Exit transition */
   function exitIntro() {
     introDone = true;
     cancelAnimationFrame(iFrame);
@@ -323,7 +310,7 @@
     setTimeout(function() {
       overlay.remove();
       iRenderer.dispose();
-      startBgScene();   /* ← launch lightweight background */
+      startBgScene();   
     }, 1400);
   }
 
@@ -331,9 +318,9 @@
 
 
 
-  /* ═══════════════════════════════════════════════════════════
-     PHASE 2 — BACKGROUND SCENE (after intro)
-  ═══════════════════════════════════════════════════════════ */
+  /*
+     BACKGROUND SCENE (after intro)
+ */
   function startBgScene() {
     var container = document.getElementById('canvas-container');
     var W = function(){ return window.innerWidth; };

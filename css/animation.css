@@ -1,6 +1,6 @@
-/* ========================================
-   CUSTOM ANIMATIONS
-======================================== */
+/* 
+CUSTOM ANIMATIONS
+*/
 
 @keyframes slideUpFade {
     from {
@@ -91,9 +91,9 @@ html {
 }
 
 
-/* ========================================
-   POST-INTRO CONTENT ANIMATIONS
-======================================== */
+/* 
+POST-INTRO CONTENT ANIMATIONS
+ */
 
 /* Blog body starts hidden, intro JS reveals */
 body.intro-active > *:not(#intro-overlay):not(#canvas-container) {

@@ -233,10 +233,12 @@ footer {
     display: flex;
     margin-bottom: 15px;
     align-items: flex-start;
+    width: 100%;
 }
 
 .chat-message.user-message {
     justify-content: flex-end;
+    flex-direction: row-reverse;
 }
 
 .chat-message.bot-message {
@@ -256,6 +258,7 @@ footer {
     background: linear-gradient(135deg, var(--soft-orange), #ffcc80);
     color: white;
     border-bottom-right-radius: 4px;
+    margin-left: auto;
 }
 
 .message-bubble.bot {
@@ -263,6 +266,7 @@ footer {
     color: var(--dark-green);
     border: 1px solid var(--soft-green);
     border-bottom-left-radius: 4px;
+    margin-right: auto;
 }
 
 .message-bubble.error {
@@ -320,9 +324,9 @@ footer {
     40% { transform: scale(1); opacity: 1; }
 }
 
-/* ========================================
-   SUSCRIPTION SECTION
-======================================== */
+/* 
+SUSCRIPTION SECTION
+*/
 #suscripcion {
     background: linear-gradient(135deg, rgba(178, 255, 218, 0.15) 0%, rgba(255, 179, 71, 0.15) 100%);
     position: relative;
